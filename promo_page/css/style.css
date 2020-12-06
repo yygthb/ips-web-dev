@@ -1,8 +1,18 @@
 body,
-.button {
+a {
     font: 400 15px/28px 'Lato', sans-serif;
     letter-spacing: 0.75px;
     color: #060c31;
+    text-decoration: none;
+}
+
+a, a:focus {
+    outline: none
+}
+
+.content {
+    max-width: fit-content;
+    margin: 0 auto;
 }
 
 /* Header */
@@ -13,6 +23,7 @@ body,
 
 .header__logo {
     margin-top: 60px;
+    width: 60px;
 }
 /* / Header */
 
@@ -31,16 +42,20 @@ body,
 
 .main .main__text {
     width: 420px;
-    margin-bottom: 47px;
+    margin-bottom: 48px;
+}
+
+.main__buttons {
+    margin-bottom: 28px;
 }
 
 .button {
-    height: 50px;
+    display: inline-block;
+    padding: 10px 27px;
     margin-right: 20px;
+    border: 1px solid #ffb0b1;
     border-radius: 25px;
     background-color: #fff;
-    border: 1px solid #ffb0b1;
-    outline: none;
     cursor: pointer;
 }
 
@@ -52,24 +67,17 @@ body,
     background-color: #ffe9e9;
 }
 
-.button--widepadding {
-    padding: 0 35px;
-}
-
-.button--narrowpadding {
-    padding: 0 27px;
-}
-
-.button.button--selected {
+.button.button--accept {
+    padding: 11px 35px;
+    border: none;
     color: white;
     background-color: #233fe2;
-    border: none;
 }
-.button.button--selected:hover {
+.button.button--accept:hover {
     background-color: #1f37be;
 }
 
-.button.button--selected:active {
+.button.button--accept:active {
     background-color: #1b2fa0;
 }
 /* /Main */

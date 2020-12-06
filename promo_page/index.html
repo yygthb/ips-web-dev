@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/reset.min.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Crete+Round&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
@@ -10,23 +11,25 @@
         <title>The world’s first learning solution</title>
     </head>
     <body>
-        <header class="header">
-            <img src="./media/logo.svg" alt="logo Mix" class="header__logo">
-        </header>
-
-        <section class="main">
-            <h1 class="main__title">The world’s first learning solution for everyone</h1>
-            <p class="main__text">
-                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.
-            </p>
-            <div class="main__buttons">
-                <button class="button button--widepadding button--selected">Get started</button>
-                <button class="button button--narrowpadding">Create account</button>
+        <section class="content">
+            <header class="header">
+                <img src="./media/logo.png" alt="logo Mix" class="header__logo">
+            </header>
+    
+            <div class="main">
+                <h1 class="main__title">The world’s first learning solution for everyone</h1>
+                <div class="main__text">
+                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.
+                </div>
+                <div class="main__buttons">
+                    <a href="#" class="button button--accept">Get started</a>
+                    <a href="#" class="button">Create account</a>
+                </div>
+            </div>
+    
+            <div class="section-image">
+                <img src="./media/clipart.jpg" alt="Illustration" class="image">
             </div>
         </section>
-
-        <div class="section-image">
-            <img src="./media/clipart.jpg" alt="Illustration" class="image">
-        </div>
     </body>
 </html>
