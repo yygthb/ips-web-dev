@@ -1,7 +1,6 @@
 body,
 a {
-    font: 700 15px/28px 'Lato', sans-serif;
-    /* letter-spacing: 0.75px; */
+    font: 400 15px/28px 'Lato', sans-serif;
     color: #060c31;
     text-decoration: none;
 }
@@ -10,10 +9,20 @@ a, a:focus {
     outline: none
 }
 
-.content {
-    max-width: fit-content;
+/* Grids */
+.content_wrapper {
+    width: 1440px;
     margin: 0 auto;
 }
+
+.content_wrapper .header {
+    padding: 0 80px 0 88px;
+}
+
+.content_wrapper .footer {
+    padding: 0 88px;
+}
+/* /Grids */
 
 /* Header */
 .header {
@@ -22,11 +31,12 @@ a, a:focus {
 
 .header_logo {
     margin-top: 68px;
+    margin-bottom: 8px;
     width: 60px;
 }
 
 .header_menu {
-    display: inline-block;
+    display: block;
     float: right;
     margin-top: 60px;
 }
@@ -37,42 +47,17 @@ a, a:focus {
     margin-right: 40px;
 }
 
+.header_menu_item:hover {
+    color: #000a4b;
+    text-decoration: underline;
+}
+
 .header_menu_item:not(:first-child) {
     margin-left: -4px;
 }
 
 .header_menu_button {
     margin-left: -4px;
-}
-/* / Header */
-
-/* Main */
-
-.main_text_wrapper {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.main_picture {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.main .main_title {
-    width: 500px;
-    margin-bottom: 36px;
-    font: 400 58px/64px 'Crete Round', serif;   
-    /* letter-spacing: 2.9px; */
-    color: #060c31;
-}
-
-.main .main_text {
-    width: 420px;
-    margin-bottom: 48px;
-}
-
-.main__buttons {
-    margin-bottom: 28px;
 }
 
 .button {
@@ -91,6 +76,33 @@ a, a:focus {
 .button:active {
     background-color: #ffe9e9;
 }
+/* / Header */
+
+/* Main */
+.main {
+    margin-bottom: 104px;
+}
+
+.main_text_wrapper {
+    margin-left: 200px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main_title {
+    width: 500px;
+    margin-bottom: 42px;
+    font: 400 58px/64px 'Crete Round', serif;
+    color: #060c31;
+}
+
+.main_text {
+    width: 420px;
+    margin-bottom: 76px;
+    letter-spacing: 0.75px;
+    font-weight: 700;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5)
+}
 
 .button.button_accept {
     padding: 11px 35px;
@@ -106,4 +118,27 @@ a, a:focus {
 .button.button_accept:active {
     background-color: #1b2fa0;
 }
+
+.main_picture {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: -57px;
+
+    width: 790px;
+}
 /* /Main */
+
+/* Footer */
+.footer {
+    height: 76px;
+}
+
+.footer_clients_wrapper {
+    float: right;
+}
+
+.client_link {
+    vertical-align: middle;
+    margin-left: 104px;
+}
+/* /Footer */
