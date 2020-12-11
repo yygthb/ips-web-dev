@@ -41,23 +41,23 @@ a, a:focus {
     margin-top: 60px;
 }
 
+.header_menu_nav {
+    display: inline-block;
+    margin-right: 40px;
+}
+
 .header_menu_item {
     font: 700 13px/28px 'Lato', sans-serif;
     display: inline-block;
-    margin-right: 40px;
+}
+
+.header_menu_item:not(:first-child) {
+    margin-left: 36px;
 }
 
 .header_menu_item:hover {
     color: #000a4b;
     text-decoration: underline;
-}
-
-.header_menu_item:not(:first-child) {
-    margin-left: -4px;
-}
-
-.header_menu_button {
-    margin-left: -4px;
 }
 
 .button {
