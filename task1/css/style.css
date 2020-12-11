@@ -67,17 +67,17 @@ a, a:focus {
     background-color: #ffe9e9;
 }
 
-.button.button--accept {
+.button.button_accept {
     padding: 11px 35px;
     border: none;
     color: white;
     background-color: #233fe2;
 }
-.button.button--accept:hover {
+.button.button_accept:hover {
     background-color: #1f37be;
 }
 
-.button.button--accept:active {
+.button.button_accept:active {
     background-color: #1b2fa0;
 }
 /* /Main */
