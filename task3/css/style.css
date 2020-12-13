@@ -1,0 +1,224 @@
+/* Common */
+a {
+    display: inline-block;
+    font: 500 16px/19.5px 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    font: 500 48px/60.51px 'Montserrat', sans-serif;
+}
+
+.button {
+    background-color: #05090C;
+    font-weight: 600;
+    color: #fff;
+    padding: 18.15px 40.5px;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #122533;
+    text-decoration: none;
+}
+
+.button:active {
+    background-color: #091822;
+    text-decoration: none;
+}
+
+p {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.text_colored {
+    color: #EE58B6;
+}
+/* /Common */
+
+/* Header */
+.header {
+    height: 115px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_wrapper {
+    max-width: 1680px;
+    margin: 0 auto;
+}
+
+.header_logo {
+    width: 203px;
+}
+
+.nav_item {
+    margin-left: 87px;
+    color: #000;
+}
+
+.nav_button {
+    margin-left: 99px;
+}
+/* /Header */
+
+/* Intro */
+.intro {
+    height: 745px;
+    max-width: 1564px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro_title {
+    font: 600 100px/155px 'Montserrat', sans-serif;
+}
+
+.intro_subtitle {
+    width: 545px;
+    margin-bottom: 46px;
+    font: 400 26px/31.2px 'Roboto Condensed', sans-serif;
+}
+
+.intro_button {
+    padding-left: 82.5px;
+    padding-right: 82.5px;
+}
+/* /Intro */
+
+/* Promo */
+.promo {
+    height: 400px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.promo_cards {
+    width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.promo_card {
+    width: 337px;
+    text-align: center;
+}
+
+.card_img {
+    height: 52px;
+    margin-bottom: 20px;
+}
+
+.card_text {
+    font: 400 22px/26.4px 'Roboto Condensed', sans-serif;
+    color: #fff;
+}
+/* /Promo */
+
+/* Troubles */
+.troubles {
+    max-width: 1350px;
+    margin: 34px auto 100px;
+}
+
+.trouble {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.trouble_text {
+    width: 50%;
+}
+
+.trouble_title {
+    margin-bottom: 24px;
+}
+
+.position_first {
+    order: -1;
+}
+
+.trouble_subtitle {
+    font: 400 18px/24.3px 'Roboto Condensed', sans-serif;
+}
+
+.trouble_first .trouble_subtitle {
+    width: 620px;
+}
+
+.trouble_second {
+    margin-top: -86px;
+}
+
+.trouble_second .trouble_text {
+    margin-left: 97px;
+}
+
+.trouble_second .trouble_img {
+    margin-left: 47px;
+}
+/* /Troubles */
+
+/* Skills  */
+.skill {
+    width: 1135px;
+    margin: 0 auto 170px;
+}
+
+.skill_title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.skill_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 190px);
+    gap: 30px;
+}
+
+.skill_card {
+    background-color: #000;
+    padding-top: 32px;
+    padding-left: 40px;
+}
+
+.skill_card_img {
+    margin-bottom: 21px;
+}
+
+.skill_card_text {
+    font: 400 18px/21px 'Roboto Condensed', sans-serif;
+    color: #fff;
+}
+
+.skill_card_text {
+    width: 270px;
+}
+
+.card_three .skill_card_text {
+    width: 240px;
+}
+
+.card_four .skill_card_text {
+    width: 260px;
+}
+
+.card_five .skill_card_text {
+    width: 210px;
+}
+
+.card_six .skill_card_text {
+    width: 286px;
+}
+/* /Skills  */
