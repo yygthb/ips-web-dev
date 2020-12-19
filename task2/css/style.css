@@ -63,6 +63,7 @@ a, a:focus {
 .button {
     display: inline-block;
     padding: 10px 27px;
+    font-weight: 700;
     border: 1px solid #ffb0b1;
     border-radius: 25px;
     background-color: #fff;
@@ -97,11 +98,12 @@ a, a:focus {
 }
 
 .main_text {
-    width: 435px;
+    width: 433px;
     margin-bottom: 76px;
+    /* font: 400 15px/28px 'Lato', sans-serif; */
+    /* font-weight: 400; */
     letter-spacing: 0.75px;
-    font-weight: 700;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5)
+    color: #060C31;
 }
 
 .button.button_accept {
