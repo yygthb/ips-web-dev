@@ -131,7 +131,6 @@ p {
 }
 
 .trouble {
-    width: 100%;
     display: flex;
     align-items: center;
 }
@@ -142,10 +141,6 @@ p {
 
 .trouble_title {
     margin-bottom: 24px;
-}
-
-.position_first {
-    order: -1;
 }
 
 .trouble_subtitle {
