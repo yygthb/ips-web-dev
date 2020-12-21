@@ -1,8 +1,21 @@
+/* variables */
+:root {
+    --color-pink: #EE58B6;
+    --color-pink-checkbox-hover: #e6bdd7;
+    --color-pink-checkbox-focus: #b33f88;
+}
+/* /variables */
+
 /* Common */
-a {
+a, input {
     display: inline-block;
-    font: 500 16px/19.5px 'Montserrat', sans-serif;
     text-decoration: none;
+    outline: none;
+}
+
+a, input,
+.button, .form_input_select {
+    font: 500 16px/19.5px 'Montserrat', sans-serif;
 }
 
 a:hover {
@@ -36,7 +49,8 @@ p {
 }
 
 .text_colored {
-    color: #EE58B6;
+    /* color: #EE58B6; */
+    color: var(--color-pink)
 }
 /* /Common */
 
@@ -218,3 +232,157 @@ p {
     width: 286px;
 }
 /* /Skills  */
+
+/* Todo */
+.todo {
+    background-color: #000;
+}
+
+.todo_wrapper {
+    max-width: 1420px;
+    margin: 0 auto;
+    padding-top: 125px;
+    padding-bottom: 238px;
+    color: white;
+}
+
+.todo_title {
+    text-align: center;
+    max-width: 470px;
+    margin: 0 auto 60px;
+}
+
+.todo_form_row {
+    margin-bottom: 17px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row_item {
+    width: 340px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form_input_select, .form_input_text {
+    padding-left: 28px;
+    background-color: #fff;
+    border: 1.34888px solid #C0C0C0;
+}
+
+.todo_form_button {
+    border: 2px solid #fff;
+    background-color: #000;
+}
+
+.todo_form_button:hover {
+    background-color: #111;
+}
+
+.todo_form_button:active {
+    background-color: #000;
+}
+
+.form_input_checkbox_label {
+    font: 400 16px/22.2px 'Roboto Condensed', sans-serif;
+    cursor: pointer;
+}
+
+.form_input_checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.form_input_checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.form_input_checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 21.58px;
+    height: 21.58px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1.35px solid #C0C0C0;
+    border-radius: 4px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    background-color: #fff;
+}
+
+.form_input_checkbox:checked+label::before {
+    border-color: var(--color-pink);
+    background-color: var(--color-pink);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+/* стили при наведении курсора на checkbox */
+.form_input_checkbox:not(:disabled):not(:checked)+label:hover::before {
+    border-color: var(--color-pink-checkbox-hover);
+}
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.form_input_checkbox:not(:disabled):active+label::before {
+    background-color: var(--color-pink-checkbox-hover);
+    border-color: var(--color-pink-checkbox-hover);
+}
+/* стили для чекбокса, находящегося в фокусе */
+.form_input_checkbox:focus+label::before {
+    box-shadow: 0 0 0 1.35px var(--color-pink-checkbox-focus);
+}
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.form_input_checkbox:focus:not(:checked)+label::before {
+    border-color: var(--color-pink-checkbox-focus);
+}
+
+/* /Todo */
+
+/* Author */
+.author {
+    max-width: 735px;
+    margin: 126px auto 118px;
+    text-align: center;
+}
+
+.author_avatar {
+    margin-bottom: 20px;
+}
+
+.author_title {
+    font: 500 26px/31.2px 'Montserrat', sans-serif;
+    margin-bottom: 9px;
+}
+
+.author_text {
+    font: 400 18px/27px 'Roboto Condensed', sans-serif;
+}
+
+.author_subtitle {
+    margin-bottom: 24px;
+}
+
+.author_about {
+    max-width: 626px;
+    margin: 0 auto 41px;
+}
+
+.social_link_img {
+    width: 48px;
+    margin: 0 5px;
+}
+/* /Author */
+
+/* Footer */
+.footer {
+    height: 108px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* /Footer */
