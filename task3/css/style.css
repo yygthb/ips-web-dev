@@ -325,21 +325,8 @@ p {
 /* стили при наведении курсора на checkbox */
 .form_input_checkbox:not(:disabled):not(:checked)+label:hover::before {
     border-color: var(--color-pink-checkbox-hover);
-}
-/* стили для активного состояния чекбокса (при нажатии на него) */
-.form_input_checkbox:not(:disabled):active+label::before {
-    background-color: var(--color-pink-checkbox-hover);
-    border-color: var(--color-pink-checkbox-hover);
-}
-/* стили для чекбокса, находящегося в фокусе */
-.form_input_checkbox:focus+label::before {
     box-shadow: 0 0 0 1.35px var(--color-pink-checkbox-focus);
 }
-/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
-.form_input_checkbox:focus:not(:checked)+label::before {
-    border-color: var(--color-pink-checkbox-focus);
-}
-
 /* /Todo */
 
 /* Author */
