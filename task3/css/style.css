@@ -270,6 +270,20 @@ p {
     border: 1.34888px solid #C0C0C0;
 }
 
+.form_input_select {
+    color: #999;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url('../media/select_mark.png');
+    background-repeat: no-repeat;
+    background-position: top 50% right 29.25px;
+}
+
+.form_input_select::-ms-expand {
+    display: none;
+}
+
 .todo_form_button {
     border: 2px solid #fff;
     background-color: #000;
@@ -298,6 +312,7 @@ p {
     display: inline-flex;
     align-items: center;
     user-select: none;
+    
 }
 
 .form_input_checkbox+label::before {
@@ -313,7 +328,7 @@ p {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 50% 50%;
-    background-color: #fff;
+    background-color: #000;
 }
 
 .form_input_checkbox:checked+label::before {
@@ -324,8 +339,7 @@ p {
 
 /* стили при наведении курсора на checkbox */
 .form_input_checkbox:not(:disabled):not(:checked)+label:hover::before {
-    border-color: var(--color-pink-checkbox-hover);
-    box-shadow: 0 0 0 1.35px var(--color-pink-checkbox-focus);
+    border-color: var(--color-pink);
 }
 /* /Todo */
 
