@@ -60,6 +60,13 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    opacity: 0;
+    transition: opacity 0.23s ease-out 0.3s;
+}
+
+.loaded .header {
+    opacity: 1;
+    color: 'red';
 }
 
 .header_wrapper {
@@ -91,6 +98,17 @@ p {
     align-items: center;
 }
 
+.intro_text {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all .3s ease-out .53s;
+}
+
+.loaded .intro_text {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 .intro_title {
     font: 600 100px/155px 'Montserrat', sans-serif;
 }
@@ -105,6 +123,17 @@ p {
     padding-left: 82.5px;
     padding-right: 82.5px;
 }
+
+.intro_img {
+    transform: translateY(100px) scale(0.75);
+    opacity: 0;
+    transition: all .3s ease-out .53s;
+}
+
+.loaded .intro_img {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}
 /* /Intro */
 
 /* Promo */
@@ -113,6 +142,12 @@ p {
     background-color: #000;
     display: flex;
     align-items: center;
+    opacity: 0;
+    transition: opacity .15s ease-out .83s;
+}
+
+.loaded .promo {
+    opacity: 1;
 }
 
 .promo_cards {
@@ -125,6 +160,22 @@ p {
 .promo_card {
     width: 337px;
     text-align: center;
+}
+
+.promo_card:nth-child(1) {
+    opacity: 0;
+    transition: opacity .15s ease-out .98s;
+}
+.promo_card:nth-child(2) {
+    opacity: 0;
+    transition: opacity .15s ease-out 1.13s;
+}
+.promo_card:nth-child(3) {
+    opacity: 0;
+    transition: opacity .15s ease-out 1.28s;
+}
+.loaded .promo_card {
+    opacity: 1;
 }
 
 .card_img {
@@ -176,6 +227,48 @@ p {
 .trouble_second .trouble_img {
     margin-left: 47px;
 }
+
+.trouble_first .trouble_img {
+    transform: translateX(-50px);
+    opacity: 0;
+}
+
+.trouble_first .trouble_text {
+    transform: translateX(50px);
+    opacity: 0;
+}
+
+.trouble_first .trouble_img,
+.trouble_first .trouble_text {
+    transition: all .3s ease-out;
+}
+
+.trouble_first.loaded .trouble_img,
+.trouble_first.loaded .trouble_text {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.trouble_second .trouble_text {
+    transform: translateX(-50px);
+    opacity: 0;
+}
+
+.trouble_second .trouble_img {
+    transform: translateX(50px);
+    opacity: 0;
+}
+
+.trouble_second .trouble_img,
+.trouble_second .trouble_text {
+    transition: all .3s ease-out;
+}
+
+.trouble_second.loaded .trouble_img,
+.trouble_second.loaded .trouble_text {
+    transform: translateX(0);
+    opacity: 1;
+}
 /* /Troubles */
 
 /* Skills  */
@@ -187,6 +280,17 @@ p {
 .skill_title {
     text-align: center;
     margin-bottom: 60px;
+}
+
+.skill_title span {
+    transform: scale(.3);
+    opacity: 0;
+    transition: all .5s ease-out;
+}
+
+.skill.loaded .skill_title span {
+    transform: scale(1);
+    opacity: 1;
 }
 
 .skill_cards {
@@ -230,6 +334,41 @@ p {
 
 .card_six .skill_card_text {
     width: 286px;
+}
+
+.skill_card {
+    opacity: 0;
+    transition-property: opacity;
+    transition-timing-function: ease-out;
+    transition-duration: .3s;
+}
+
+.card_four {
+    transition-delay: .3s;
+}
+
+.card_two {
+    transition-delay: .5s;
+}
+
+.card_six {
+    transition-delay: .7s;
+}
+
+.card_one {
+    transition-delay: .9s;
+}
+
+.card_five {
+    transition-delay: 1.1s;
+}
+
+.card_three {
+    transition-delay: 1.3s;
+}
+ 
+.skill.loaded .skill_card {
+    opacity: 1;
 }
 /* /Skills  */
 
