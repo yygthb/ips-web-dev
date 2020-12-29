@@ -261,11 +261,11 @@ p {
 
 .trouble_second .trouble_img,
 .trouble_second .trouble_text {
-    transition: all .3s ease-out;
+    transition: all .3s ease-out .5s;
 }
 
-.trouble_second.loaded .trouble_img,
-.trouble_second.loaded .trouble_text {
+.troubles.loaded .trouble_img,
+.troubles.loaded .trouble_text {
     transform: translateX(0);
     opacity: 1;
 }

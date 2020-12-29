@@ -1,6 +1,5 @@
 const ANIMATED_BLOCK_OFFSET = 300
-const troubleFirst = '.trouble_first'
-const troubleSecond = '.trouble_second'
+const troubles = '.troubles'
 const skill = '.skill'
 
 function setBodyLoaded() {
@@ -25,8 +24,7 @@ function setAnimatedBlockLoaded(selector) {
 }
 function collectAnimatingBlocks() {
     setBodyLoaded()
-    setAnimatedBlockLoaded(troubleFirst)
-    setAnimatedBlockLoaded(troubleSecond)
+    setAnimatedBlockLoaded(troubles)
     setAnimatedBlockLoaded(skill)
 }
 
