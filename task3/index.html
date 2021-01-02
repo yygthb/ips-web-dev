@@ -124,7 +124,7 @@
                 <img src="./media/skill/img_six.png" alt="six" class="skill_card_img">
                 <p class="skill_card_text">
                     <!-- Оптимизировать общение с клиентами <span class="hide_1000vw"> и проведение совещаний.</span> -->
-                    Оптимизировать общение с клиентами и проведение совещаний.
+                    Оптимизировать общение с клиентами <span class="hide_text">и проведение совещаний.</span>
                 </p>
             </div>
         </div>
@@ -136,18 +136,16 @@
         <div class="todo_wrapper">
             <h2 class="todo_title">Единственное, что нужно <span class="text_colored">сделать</span></h2>
             <form action="" method="GET" class="todo_form">
-                <div class="todo_form_row">
-                    <input type="text" name="name" class="form_input_text row_item" placeholder="Ваше имя">
-                    <input type="email" name="email" class="form_input_text row_item" placeholder="Email">
-                    <select name="job" class="form_input_select row_item">
-                        <option class="option" value="" disabled selected>Деятельность</option>
-                        <option class="option" value="programmer">Программист</option>
-                        <option class="option" value="designer">Дизайнер</option>
-                        <option class="option" value="marketer">Маркетолог</option>
-                    </select>
-                    <button class="todo_form_button button row_item">Записаться на курс</button>
-                </div>
-                <div class="todo_form_row">
+                <input type="text" name="name" class="form_input_text row_item" placeholder="Ваше имя">
+                <input type="email" name="email" class="form_input_text row_item" placeholder="Email">
+                <select name="job" class="form_input_select row_item">
+                    <option class="option" value="" disabled selected>Деятельность</option>
+                    <option class="option" value="programmer">Программист</option>
+                    <option class="option" value="designer">Дизайнер</option>
+                    <option class="option" value="marketer">Маркетолог</option>
+                </select>
+                <button class="todo_form_button button row_item">Записаться на курс</button>
+                <div class="row_accept">
                     <input name="accept" id="accept" type="checkbox" class="form_input_checkbox">
                     <label for="accept" class="form_input_checkbox_label">Согласен получать информационные материалы о старте курса</label>
                 </div>

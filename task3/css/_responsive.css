@@ -91,15 +91,14 @@
     .skill_card_img {
         margin-bottom: 10px;
     }
-    .todo_form_row {
+    .todo_form {
         max-width: 700px;
         margin: 0 auto;
         flex-wrap: wrap;
         justify-content: space-around;
     }
     .row_item {
-        width: 46.5%;
-        margin-bottom: 25px;
+        width: 48%;
     }
     .form_input_text, .form_input_select {
         height: 60px;
@@ -132,6 +131,7 @@
         flex-direction: column;
     }
     .intro_text {
+        text-align: center;
         flex-basis: 80%;
     }
     .intro_title {
@@ -141,6 +141,7 @@
     .intro_subtitle {
         font-size: 24px;
         margin-bottom: 35px;
+        max-width: 100%;
     }
     .intro_img {
         max-width: 70%;
@@ -164,6 +165,7 @@
         margin-bottom: 20px;
         text-align: center;
         font-size: 22px;
+        line-height: 26px;
     }
     .skill_cards {
       grid-template-columns: repeat(2, 1fr);
@@ -176,19 +178,15 @@
     }
     .todo_title {
         max-width: 472px;
-    }   
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .intro_text {
-        text-align: center;
-    }
     .intro_title {
         font-size: 12vw;
     }
     .intro_subtitle {
         font-size: 22px;
-        max-width: 100%;
     }
     .button {
         padding-left: 40px;
@@ -199,14 +197,81 @@
     }
     h2 {
         font-size: 40px;
+        line-height: 50px;
+    }
+    .skill_title {
+        margin-bottom: 24px;
+    }
+    .skill_card_text {
+        font-size: 16px;
+    }
+    .trouble_subtitle {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .todo_form {
+        text-align: center;
+    }
+    .todo_title {
+        margin-bottom: 30px;
+    }
+    .row_item {
+        width: 290px;
+    }
+    .row_accept {
+        width: 290px;
+        text-align: start;
+        margin-bottom: 17px;
+    }
+    .todo_form_button {
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+        height: 70px;
+    }
+    .trouble_subtitle {
+        font-size: 16px;
+    }
+    .skill_cards {
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 408px) {
+    .intro_title {
+        margin-bottom: 40px;
+    }
+    h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .promo_card {
+        max-width: 100%;
     }
     .card_text {
         font-size: 18px;
     }
     .trouble_subtitle {
-        font-size: 18px;
+        line-height: 20px;
     }
-    .row_item {
-        width: 300px;
+    .trouble_second .trouble_img {
+        max-width: 100%;
+    }
+    .skill_cards {
+        gap: 10px;
+    }
+    .skill_card {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .skill_card_text {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .hide_text {
+        display: none;
     }
 }
