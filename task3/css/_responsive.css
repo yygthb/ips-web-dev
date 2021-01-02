@@ -1,0 +1,212 @@
+@media screen and (max-width: 1600px) {
+    .intro_text {
+        flex-basis: 48%;
+    }
+    .intro_title {
+        font-size: 6.5vw;
+        line-height: 10vw;
+    }
+    .intro_img {
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .nav_item {
+      margin-left: 60px;
+    }
+    .nav_button {
+      margin-left: 60px;
+    }
+    .row_item {
+        width: 24%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .promo_cards {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .trouble_first {
+        margin-top: 16.66vw;
+    }
+    .trouble_first .trouble_img {
+        width: 45.5%;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .header_nav {
+        display: none;
+    }
+    .header_burger {
+        display: flex;
+        flex-direction: column;
+    }
+    .intro_subtitle {
+        font-size: 22px;
+        line-height: 25px;
+        margin-bottom: 3vw;
+        max-width: 90%;
+    }
+    .promo_card:nth-child(2) {
+      width: 310px;
+    }    
+    .card_text {
+        font-size: 20px;
+    }
+    .skill_cards {
+        gap: 15px;
+    }
+    .skill_card {
+        padding: 17px 17px 20px;
+    }
+    .skill_card_img {
+      margin-bottom: 16px;
+    }
+    .button {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+    .form_input_select, .form_input_text {
+      padding-left: 18px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .promo_cards {
+        flex-direction: column;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .card_img {
+        margin-bottom: 5px;
+    }
+    .promo_card:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    .skill_card_img {
+        margin-bottom: 10px;
+    }
+    .todo_form_row {
+        max-width: 700px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .row_item {
+        width: 46.5%;
+        margin-bottom: 25px;
+    }
+    .form_input_text, .form_input_select {
+        height: 60px;
+    }
+    .skill_card_text {
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .intro_title {
+        font-size: 5.5vw;
+    }
+    .intro_subtitle {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 36px;
+    }
+    .todo_wrapper {
+        padding-bottom: 150px;
+    }
+    .todo_title {
+        max-width: 353px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .intro {
+        flex-direction: column;
+    }
+    .intro_text {
+        flex-basis: 80%;
+    }
+    .intro_title {
+        font-size: 10vw;
+        margin-bottom: 30px;
+    }
+    .intro_subtitle {
+        font-size: 24px;
+        margin-bottom: 35px;
+    }
+    .intro_img {
+        max-width: 70%;
+        margin-top: 65px;
+    }
+    h2 {
+        font-size: 48px;
+        text-align: center;
+    }
+    .trouble {
+        flex-direction: column;
+    }
+    .trouble_first .trouble_img {
+        order: 1;
+        width: 90%;
+    }
+    .trouble_text  {
+        width: 90%;
+    }
+    .trouble_subtitle {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 22px;
+    }
+    .skill_cards {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .skill_card {
+        display: block;
+        text-align: center;
+    }
+    .todo_title {
+        max-width: 472px;
+    }   
+}
+
+@media screen and (max-width: 600px) {
+    .intro_text {
+        text-align: center;
+    }
+    .intro_title {
+        font-size: 12vw;
+    }
+    .intro_subtitle {
+        font-size: 22px;
+        max-width: 100%;
+    }
+    .button {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .intro_img {
+        max-width: 100%;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    .card_text {
+        font-size: 18px;
+    }
+    .trouble_subtitle {
+        font-size: 18px;
+    }
+    .row_item {
+        width: 300px;
+    }
+}
