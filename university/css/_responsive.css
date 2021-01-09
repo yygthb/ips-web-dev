@@ -1,0 +1,318 @@
+@media screen and (max-width: 1350px) {
+    .why_cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 167px);
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .subscribe_form {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .form_input {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 0;
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .intro {
+        height: 900px;
+    }
+    .intro_main {
+        margin-top: 130px;
+    }
+    .frame {
+        margin-bottom: 30px;
+    }
+    .subscribe_title {
+        font-size: 85px;
+        line-height: 110%;
+    }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+    .footer_lists {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer_list {
+        width: 100% !important;
+        text-align: center;
+    }
+    .list_title:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    .list_item {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .header_nav {
+        display: none;
+    }
+    .header_burger {
+        display: block;
+        width: 35px;
+        cursor: pointer;
+    }
+    .burger_line {
+        display: block;
+        width: 100%;
+        height: 5px;
+        margin-bottom: 6px;
+        background-color: #fff;
+    }
+    .burger_line:last-child {
+        margin-bottom: 0;
+    }
+    .frame {
+        margin-bottom: 25px;
+    }
+    .why_title {
+        text-align: center;
+    }
+    .subscribe .section_wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .subscribe_title {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .subscribe_form {
+        width: 75%;
+        flex-direction: row;
+    }
+    .form_input {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 22px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .frame {
+        margin-bottom: 20px;
+    }
+    .why_cards {
+        grid-template-rows: repeat(3, 157px);
+    }
+    .why_card {
+        flex-direction: column;
+        padding-right: 0;
+        padding-top: 10px;
+    }
+    .why_card_num {
+        margin-right: 0;
+    }
+    .why_card_text {
+        text-align: center;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .intro_title {
+        font-size: 75px;
+        line-height: 100%;
+    }
+    .frame {
+        margin-bottom: 17px;
+    }
+    .frame_info {
+        top: 16px;
+        left: 20px;
+    }
+    .frame_info_title {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+    .frame_info_text {
+        font-size: 16px;
+    }
+    .why_cards {
+        gap: 20px;
+    }
+    .subscribe_title {
+        font-size: 70px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .intro_title {
+        font-size: 65px;
+        line-height: 100%;
+    }
+    .main_title {
+        font-size: 40px;
+        margin-bottom: 35px;
+    }
+    .frame {
+        margin-bottom: 15px;
+    }
+    .subscribe_form {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .intro {
+        height: 750px;
+    }
+    .intro_main {
+        margin-left: 0;
+        margin-top: 100px;
+        text-align: center;
+    }
+    .intro_title {
+        font-size: 60px;
+        line-height: 100%;
+    }
+    .main_title {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .main_frames {
+        column-count: 1;
+        column-gap: 0;
+    }
+    .frame_info {
+        top: 30px;
+        left: 32px;
+    }
+    .frame_info_title {
+        font-size: 26px;
+        margin-bottom: 8px;
+    }
+    .frame_info_text {
+        font-size: 18px;
+    }
+    .frame {
+        margin-bottom: 15px;
+    }
+    .why_title {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .why_cards {
+        grid-template-rows: repeat(3, 1fr);
+        gap: 15px;
+    }
+    .why_card {
+        padding: 10px 7px;
+    }
+    .why_card_num {
+        font-size: 50px;
+        line-height: 100%;
+        margin-bottom: 7px;
+    }
+    .why_card_text {
+        font-size: 22px;
+    }
+    .subscribe_title {
+        font-size: 50px;
+        line-height: 100%;
+    }
+    .subscribe_form {
+        flex-direction: column;
+        align-items: center;
+    }
+    .form_input {
+        width: 90%;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    /* cancel animation */
+    .main {
+        transform: translateY(0);
+    }
+    .why_title, .why_cards {
+        opacity: 1;
+        transform: translateX(0)
+    }
+    /* /cancel animation */
+    .intro {
+        height: 700px;
+    }
+    .main, .why_content {
+        margin-bottom: 100px;
+    }
+    .why_cards {
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: 1fr;
+    }
+    .why_card {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 0;
+    }
+    .why_card_num {
+        margin-bottom: 0;
+        text-align: center;
+        width: 25%;
+    }
+    .why_card_text {
+        margin: 0 auto;
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .header_wrapper,
+    .section_wrapper,
+    .main {
+        padding: 0 10px;
+    }
+    .intro_title {
+        font-size: 12vw;
+        line-height: 120%;
+    }
+    .frame_info {
+        top: 16px;
+        left: 20px;
+    }
+    .frame_info_title {
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+    .frame_info_text {
+        font-size: 16px;
+    }
+    .why_cards {
+        gap: 12px;
+    }
+    .why_card_text {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .footer {
+        padding-top: 50px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .main_title,
+    .why_title,
+    .subscribe_title {
+        font-size: 12vw;
+        margin-bottom: 30px;
+    }
+    .form_input, .form_button {
+        width: 100%;
+    }
+}
