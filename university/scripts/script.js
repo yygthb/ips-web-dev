@@ -8,7 +8,7 @@ window.addEventListener('load', function () {
 function setBodyLoaded() {
   let body = document.getElementsByTagName('body')[0];
   body.classList.add('loaded');
-}
+};
 
 function setAnimatedBlockLoaded(selector = '.main') {
   let reached = false;
@@ -26,11 +26,11 @@ function setAnimatedBlockLoaded(selector = '.main') {
           }
 
       }
-  })
-}
+  });
+};
 
-const formButton = document.querySelector('.form_button')
+const formButton = document.querySelector('.form_button');
 
 formButton.addEventListener('click', e => {
-  e.preventDefault()
-})
+  e.preventDefault();
+});

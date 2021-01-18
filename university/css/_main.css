@@ -23,6 +23,14 @@ h1, h2, h3, h4 {
     position: relative;
 }
 
+.intro.young {
+    background: url('../media/intro_background_young.jpg') no-repeat center;
+}
+
+.intro.average {
+    background: url('../media/intro_background_average.jpg') no-repeat center;
+}
+
 .background_grad {
     position: absolute;
     width: 100%;
