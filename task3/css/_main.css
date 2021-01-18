@@ -75,7 +75,7 @@ p {
     opacity: 1;
 }
 
-.header_wrapper {
+.header_wrap {
     max-width: 1710px;
     margin: 0 auto;
 }
@@ -390,12 +390,78 @@ p {
 }
 /* /Skills  */
 
+/* Info */
+.info_wrap {
+    max-width: 750px;
+    padding: 0 15px;
+    margin: 0 auto;
+    margin-bottom: 195px;
+}
+
+.info_card {
+    border-bottom: 1px solid #000;
+    margin-bottom: 35px;
+}
+
+.info_title {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.info_header {
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info_header_title {
+    font: 500 26px/31.2px 'Montserrat', sans-serif;
+    cursor: pointer;
+}
+
+.icon_accordeon_handler {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform .75s ease-out;
+}
+
+.info_header_title,
+.icon_accordeon_handler {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.info_card .info_body {
+    display: none;
+    /* overflow: hidden;
+    height: 0; */
+}
+
+.info_card.show .info_body {
+    display: block;
+    /* height: 68px; */
+}
+.info_card.show .icon_accordeon_handler {
+    transform: rotate(225deg);
+}
+
+.info_body_text {
+    font: 400 18px/21px 'Roboto Condensed', sans-serif;
+    max-width: 85%;
+    padding-bottom: 26px;
+}
+/* /Info */
+
 /* Todo */
 .todo {
     background-color: #000;
 }
 
-.todo_wrapper {
+.todo_wrap {
     max-width: 1450px;
     padding: 0 15px;
     margin: 0 auto;

@@ -118,11 +118,14 @@
     h2 {
         font-size: 36px;
     }
-    .todo_wrapper {
+    .todo_wrap {
         padding-bottom: 150px;
     }
+    .info_wrap {
+        margin-bottom: 150px;
+    }
     .todo_title {
-        max-width: 353px;
+        max-width: 470px;
     }
 }
 
@@ -175,6 +178,10 @@
     .skill_card {
         display: block;
         text-align: center;
+    }
+    .info_title {
+        margin-bottom: 30px;
+        font-size: 36px;
     }
     .todo_title {
         max-width: 472px;
@@ -231,6 +238,7 @@
 @media screen and (max-width: 500px) {
     .header {
         height: 70px;
+        margin-bottom: 45px;
     }
     .trouble_subtitle {
         font-size: 16px;
@@ -238,13 +246,17 @@
     .skill_cards {
         gap: 15px;
     }
+    .info_header_title {
+        font-size: 22px;
+        line-height: 26px;
+    }
 }
 
 @media screen and (max-width: 408px) {
     .intro_title {
         margin-bottom: 40px;
     }
-    h2 {
+    h2, .info_title {
         font-size: 32px;
         line-height: 40px;
     }
@@ -259,6 +271,9 @@
     }
     .trouble_second .trouble_img {
         max-width: 100%;
+    }
+    .skill {
+        margin-bottom: 150px;
     }
     .skill_cards {
         gap: 10px;
