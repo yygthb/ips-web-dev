@@ -252,7 +252,34 @@
     }
 }
 
+@media screen and (max-width: 480px) {
+    .todo_button {
+        width: 100%;
+    }
+    .modal {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .modal_img {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .modal_title {
+        margin-bottom: 20px;
+    }
+    .modal_input {
+        padding: 15px 27px;
+        margin-bottom: 12px;
+    }
+    .modal_checkbox {
+        margin-bottom: 12px;
+    }
+}
+
 @media screen and (max-width: 408px) {
+    .header_logo {
+        width: 150px;
+    }
     .intro_title {
         margin-bottom: 40px;
     }
@@ -288,5 +315,30 @@
     }
     .hide_text {
         display: none;
+    }
+    .modal_input_checkbox_label {
+        font-size: 14px;
+        line-height: 15px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .modal {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .modal_img {
+        width: 80%;
+    }
+    .modal_title {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .modal_input {
+        padding: 12px 20px;
+        margin-bottom: 12px;
+    }
+    .modal_checkbox {
+        margin-bottom: 12px;
     }
 }

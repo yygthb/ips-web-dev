@@ -14,7 +14,7 @@ a, input {
 }
 
 a, input,
-.button, .form_input_select {
+.button, .form_input_select, .modal_input_select {
     font: 500 16px/19.5px 'Montserrat', sans-serif;
 }
 
@@ -38,6 +38,7 @@ h2 {
     color: #fff;
     padding: 18.15px 40.5px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -88,13 +89,17 @@ p {
     display: none;
     margin: 30px 0;
     cursor: pointer;
+    align-items: flex-end;
+    width: 20%;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .burger_line {
     width: 33px;
     height: 4px;
     margin: 2.5px;
-    background-color: #000;
+    background-color: var(--color-pink);
 }
 
 .nav_item {
@@ -614,3 +619,186 @@ p {
     align-items: center;
 }
 /* /Footer */
+
+/* Scroll Button */
+.button_scroll {
+    background: url('../media/scroll-to-top-button.png') no-repeat center;
+    background-size: contain;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: opacity ease-out 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.button_scroll.visible {
+    opacity: 1;
+    visibility: visible;
+}
+/* /Scroll Button */
+
+/* Modal */
+.todo_button {
+    background-color: #fff;
+    color: #000;
+    width: 400px;
+    cursor: pointer;
+    margin: 0 auto;
+    text-align: center;
+}
+.todo_button:hover {
+    background-color: rgb(241, 241, 241);
+}
+.todo_button:active {
+    background-color: rgb(218, 218, 218);
+}
+
+.overlay {
+    position: fixed;
+    padding-left: 15px;
+    padding-right: 15px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: rgba(192, 192, 192, 0.5);
+    transition: all .5s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 640px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 16px 48px rgba(60, 0, 61, 0.48);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 15px 92px;
+
+    transition: all .5s ease;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay.visible,
+.modal.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal_img {
+    width: 307px;
+    margin-bottom: 43px;
+}
+
+.modal_title {
+    font: 500 26px/31.2px 'Montserrat', sans-serif;
+    margin-bottom: 33px;
+}
+
+.modal_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal_input {
+    padding: 22px 27px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1.35px solid #C0C0C0;
+    cursor: pointer;
+}
+
+.modal_input_select {
+    color: #999;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-image: url('../media/select_mark.png');
+    background-repeat: no-repeat;
+    background-position: top 50% right 29.25px;
+}
+
+.modal_input_select:focus {
+    outline: none;
+}
+
+.modal_checkbox {
+    margin-bottom: 20px;
+}
+
+.modal_input_checkbox_label {
+    font: 400 16px/22.2px 'Roboto Condensed', sans-serif;
+    cursor: pointer;
+}
+
+.modal_input_checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.modal_input_checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  
+}
+
+.modal_input_checkbox+label::before {
+    content: '';
+    display: inline-block;
+    width: 21.58px;
+    height: 21.58px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1.35px solid #C0C0C0;
+    border-radius: 4px;
+    margin-right: 8px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    background-color: #fff;
+}
+
+.modal_input_checkbox:checked+label::before {
+    border-color: var(--color-pink);
+    background-color: var(--color-pink);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.modal_button {
+    border: 1px solid #05090C;
+}
+
+.modal_close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    width: 15px;
+    height: 15px;
+    z-index: 2000;
+    background: url('../media/img_modal_close.png') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+.error {
+    border-color:red;
+    color: red;
+}
+
+/* /Modal */

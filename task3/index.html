@@ -18,10 +18,10 @@
             <img src="./media/logo_header.png" alt="Don't do it" class="header_logo">
         </a>
         <nav class="header_nav">
-            <a href="#" class="nav_item">Что будет на курсе?</a>
-            <a href="#" class="nav_item">Вопросы</a>
-            <a href="#" class="nav_item">Автор</a>
-            <a href="#" class="button nav_button">Записаться на курс</a>
+            <a href="#skill" class="nav_item" id="_skill" data-goto="#skill">Что будет на курсе?</a>
+            <a href="#info" class="nav_item" id="_info" data-goto="#info">Вопросы</a>
+            <a href="#author" class="nav_item" id="_author" data-goto="#author">Автор</a>
+            <a href="#" class="button nav_button join_button">Записаться на курс</a>
         </nav>
         <div class="header_burger">
             <div class="burger_line"></div>
@@ -36,7 +36,7 @@
         <div class="intro_text">
             <h1 class="intro_title">Не <span class="text_colored">делай</span> это</h1>
             <p class="intro_subtitle">Онлайн-курс для творческих людей, о том, как управлять своим временем</p>
-            <a href="#" class="button intro_button">Записаться на курс</a>
+            <a href="#" class="button intro_button join_button">Записаться на курс</a>
         </div>
         <img src="./media/img_intro.png" alt="chilling guy clipart" class="intro_img">
     </section>
@@ -87,7 +87,7 @@
     <!-- /Troubles -->
     
     <!-- Skill -->
-    <section class="skill content_wrap">
+    <section class="skill content_wrap" id="skill">
         <h2 class="skill_title section_title">На курсе ты <span class="text_colored">сможешь</span></h2>
         <div class="skill_cards">
             <div class="skill_card card_one">
@@ -132,7 +132,7 @@
     <!-- /Skill -->
 
     <!-- Info -->
-    <section class="info info_wrap">
+    <section class="info info_wrap" id="info">
         <h2 class="info_title section_title">Всё, что вы хотели <span class="text_colored">узнать</span></h2>
         <div class="info_card show">
             <div class="info_header">
@@ -168,7 +168,7 @@
     <section class="todo">
         <div class="todo_wrap">
             <h2 class="todo_title">Единственное, что нужно <span class="text_colored">сделать</span></h2>
-            <form action="" method="GET" class="todo_form">
+            <!-- <form action="" method="GET" class="todo_form">
                 <input type="text" name="name" class="form_input_text row_item" placeholder="Ваше имя">
                 <input type="email" name="email" class="form_input_text row_item" placeholder="Email">
                 <select name="job" class="form_input_select row_item">
@@ -182,7 +182,8 @@
                     <input name="accept" id="accept" type="checkbox" class="form_input_checkbox">
                     <label for="accept" class="form_input_checkbox_label">Согласен получать информационные материалы о старте курса</label>
                 </div>
-            </form>
+            </form> -->
+            <div class="button todo_button join_button">Записаться на курс</div>
         </div>
     </section>
     <!-- /Todo -->
@@ -217,9 +218,43 @@
     </footer>
     <!-- /Footer -->
 
+    <!-- Scroll to top Button -->
+    <div class="button_scroll"></div>
+    <!-- /Scroll to top Button -->
+
+    <!-- Modal -->
+    <div class="overlay">
+        <div class="modal">
+            <img src="./media/img_modal.png" alt="" class="modal_img">
+            <h4 class="modal_title ">Записаться на курс</h4>
+            <form action="" class="modal_form">
+                <input type="text" id="modal_name" placeholder="Ваше имя" class="modal_row modal_input">
+                <input type="text" id="modal_email" placeholder="Email" class="modal_row modal_input">
+                <select name="job" id="modal_job" class="modal_row modal_input modal_input_select">
+                    <option class="option" value="" disabled selected>Деятельность</option>
+                    <option class="option" value="programmer">Программист</option>
+                    <option class="option" value="designer">Дизайнер</option>
+                    <option class="option" value="marketer">Маркетолог</option>
+                </select>
+                <div class="modal_checkbox">
+                    <input name="accept" id="modal_subscribe" type="checkbox" class="modal_input_checkbox">
+                    <label for="modal_subscribe" class="modal_input_checkbox_label">Согласен получать информационные материалы о старте курса</label>
+                </div>
+                <button id="modal_button" class="button modal_button">Записаться на курс</button>
+            </form>
+            <div class="modal_close"></div>
+        </div>
+    </div>
+    <!-- /Modal -->
+
     <!-- scripts -->
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
     <script src="./js/scripts.js"></script>
     <script src="./js/accordeon.js"></script>
+    <script src="./js/go-to-top-button.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/scrollTo.js"></script>
     <!-- /scripts -->
 </body>
 
