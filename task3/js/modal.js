@@ -1,3 +1,4 @@
+const body = $("body");
 const wrapper = $(".wrapper");
 const joinButton = $(".join_button");
 const overlay = $(".overlay");
@@ -8,9 +9,6 @@ const modalName = $("#modal_name");
 const modalEmail = $("#modal_email");
 const modalJob = $("#modal_job");
 const modalSubscribe = $("#modal_subscribe");
-const body = $("body");
-
-let bodyScrollY = 0;
 
 const getScrollbarWidth = () => {
     return window.innerWidth - document.documentElement.clientWidth;
@@ -18,26 +16,18 @@ const getScrollbarWidth = () => {
 
 const scrollWidth = getScrollbarWidth();
 
-function getBodyScrollTop() {
-    return (
-        self.pageYOffset ||
-        (document.documentElement && document.documentElement.ScrollTop) ||
-        (document.body && document.body.scrollTop)
-    );
-}
-
 const openModal = () => {
     overlay.addClass("visible");
     modal.addClass("visible");
 };
 
 const closeModal = () => {
-    body.removeClass("modal_open");
-    wrapper.removeClass("modal_open");
-    $(window).scrollTop(bodyScrollY);
     overlay.removeClass("visible");
     modal.removeClass("visible");
-    body.css("padding-right", `0`);
+    setTimeout(() => {
+        body.removeClass("modal_open");
+        wrapper.css("padding-right", `0`);
+    }, 1000);
 };
 
 modal.click((e) => {
@@ -51,18 +41,17 @@ joinButton.click((e) => {
     const windowHeight = $(window).height();
 
     if (modalHeight > windowHeight) {
-        console.log("+++");
-        modal.css("transform", `translate(-50%, -${windowHeight / 2 - 20}px)`);
+        modal.css(
+            "transform",
+            `translate(-50%, calc(-50% + ${
+                (modalHeight - windowHeight) / 2 + 20
+            }px))`
+        );
     }
 
-    bodyScrollY = getBodyScrollTop();
-
-    body.css("top", `-${bodyScrollY}px`);
-    wrapper.css("top", `-${bodyScrollY}px`);
-    wrapper.addClass("modal_open");
     openModal();
     body.addClass("modal_open");
-    body.css("padding-right", `${scrollWidth}px`);
+    wrapper.css("padding-right", `${scrollWidth}px`);
 });
 overlay.click(closeModal);
 closeModalButton.click(closeModal);

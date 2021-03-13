@@ -244,6 +244,15 @@
         height: 70px;
         margin-bottom: 45px;
     }
+    .header_nav.visible .nav_item {
+        padding: 18px 15px;
+        font-size: 1.4rem;
+    }
+    .nav_close {
+        top: 30px;
+        right: 15px;
+    }
+
     .trouble_subtitle {
         font-size: 16px;
     }

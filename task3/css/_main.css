@@ -10,15 +10,6 @@ body.modal_open {
     overflow: hidden;
 }
 
-/* .wrapper.modal_open {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom:0;
-    right:0;
-    overflow: auto;
-} */
-
 /* Common */
 a, input {
     display: inline-block;
@@ -97,19 +88,15 @@ p {
     width: 120px;
     height: 100vh;
 }
-
-.nav_close:first-child {
+.nav_close {
     position: absolute;
     top: 52px;
-    right: 5px;
-    transform: rotate(45deg);
-
+    right: 15px;
 }
-
+.nav_close:first-child {
+    transform: rotate(45deg);
+}
 .nav_close:last-child {
-    position: absolute;
-    top: 52px;
-    right: 5px;
     transform: rotate(-45deg);
 }
 
@@ -155,8 +142,9 @@ p {
 
 .header_nav.visible .nav_item {
     margin-left: 0;
-    padding: 47px 15px;
-    font-size: 1.2rem;
+    padding: 35px 15px;
+    font-size: 1.6rem;
+    line-height: 36px;
     border-bottom: 1px solid var(--color-pink-checkbox-hover);
 }
 .header_nav.visible .nav_item:hover {
@@ -757,12 +745,13 @@ p {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(calc(-50%), -50%);
+    transform: translate(-50%, -50%);
     max-width: 640px;
     background-color: #fff;
     border-radius: 12px;
     box-shadow: 0px 16px 48px rgba(60, 0, 61, 0.48);
-    padding: 50px 15px 92px;
+    /* padding: 50px 15px 92px; */
+    padding: 50px 15px 20px;
 
     transition: all .5s ease;
     visibility: hidden;
@@ -771,15 +760,16 @@ p {
     z-index: 40;
 }
 
-body.modal_open .modal {
-    /* transform: translate(calc(-50% - 8px), -50%); */
-}
-
 .modal_scrollable {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.modal_content {
+    max-height: 80vh;
+    overflow-y: auto;
 }
 
 .overlay.visible,
@@ -790,10 +780,13 @@ body.modal_open .modal {
 
 .modal_img {
     width: 307px;
+    display: block;
+    margin: 0 auto;
     margin-bottom: 43px;
 }
 
 .modal_title {
+    text-align: center;
     font: 500 26px/31.2px 'Montserrat', sans-serif;
     margin-bottom: 33px;
 }
