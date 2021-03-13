@@ -163,12 +163,16 @@
     }
     .trouble_text  {
         width: 90%;
+        margin-bottom: 20px;
     }
     .trouble_subtitle {
         margin-bottom: 20px;
         text-align: center;
         font-size: 22px;
         line-height: 26px;
+    }
+    .skill {
+        margin-bottom: 130px;
     }
     .skill_cards {
       grid-template-columns: repeat(2, 1fr);
@@ -253,6 +257,19 @@
 }
 
 @media screen and (max-width: 480px) {
+    .skill_cards {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      gap: 10px;
+    }
+    .skill_card {
+        display: flex;
+        align-items: center;
+    }
+    .skill_card img {
+        margin-left: 10px;
+        margin-right: 20px;
+    }
     .todo_button {
         width: 100%;
     }

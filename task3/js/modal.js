@@ -1,3 +1,4 @@
+const wrapper = $(".wrapper");
 const joinButton = $(".join_button");
 const overlay = $(".overlay");
 const modal = $(".modal");
@@ -7,6 +8,23 @@ const modalName = $("#modal_name");
 const modalEmail = $("#modal_email");
 const modalJob = $("#modal_job");
 const modalSubscribe = $("#modal_subscribe");
+const body = $("body");
+
+let bodyScrollY = 0;
+
+const getScrollbarWidth = () => {
+    return window.innerWidth - document.documentElement.clientWidth;
+};
+
+const scrollWidth = getScrollbarWidth();
+
+function getBodyScrollTop() {
+    return (
+        self.pageYOffset ||
+        (document.documentElement && document.documentElement.ScrollTop) ||
+        (document.body && document.body.scrollTop)
+    );
+}
 
 const openModal = () => {
     overlay.addClass("visible");
@@ -14,15 +32,38 @@ const openModal = () => {
 };
 
 const closeModal = () => {
+    body.removeClass("modal_open");
+    wrapper.removeClass("modal_open");
+    $(window).scrollTop(bodyScrollY);
     overlay.removeClass("visible");
     modal.removeClass("visible");
+    body.css("padding-right", `0`);
 };
 
 modal.click((e) => {
     e.stopPropagation();
+    e.stopImmediatePropagation();
 });
 
-joinButton.click(openModal);
+joinButton.click((e) => {
+    const modalHeightPx = modal.css("height");
+    const modalHeight = modalHeightPx.slice(0, modalHeightPx.length - 2);
+    const windowHeight = $(window).height();
+
+    if (modalHeight > windowHeight) {
+        console.log("+++");
+        modal.css("transform", `translate(-50%, -${windowHeight / 2 - 20}px)`);
+    }
+
+    bodyScrollY = getBodyScrollTop();
+
+    body.css("top", `-${bodyScrollY}px`);
+    wrapper.css("top", `-${bodyScrollY}px`);
+    wrapper.addClass("modal_open");
+    openModal();
+    body.addClass("modal_open");
+    body.css("padding-right", `${scrollWidth}px`);
+});
 overlay.click(closeModal);
 closeModalButton.click(closeModal);
 
@@ -35,8 +76,10 @@ function validationEmail(email) {
 }
 
 modalName.focus(() => {
-    modalName.removeClass("error");
-    modalName.val("");
+    if (modalName.hasClass("error")) {
+        modalName.removeClass("error");
+        modalName.val("");
+    }
 });
 
 modalEmail.focus(() => {
